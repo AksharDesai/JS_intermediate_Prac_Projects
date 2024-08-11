@@ -1,0 +1,384 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Roboto Mono Light;
+}
+html,body{
+   width: 100%;
+   height: 100%;
+}
+main{
+   width: 100%;
+   height: 100%;
+   display: flex;
+}
+.left{
+    width: 50%;
+    height: 100%;
+    background-color: cadetblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 520px;
+    height: 690px;
+    background-color: black;
+    border-radius: 1rem; 
+    columns: white;   
+    padding: 10px;
+    position: relative;
+}
+
+.container-top{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15px;
+    color: white;
+
+}
+.container-top h3 {
+    font-size: 15px;
+}
+.container-top h4 {
+    font-size: 14px;
+    color: gainsboro;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#search-term {
+    margin-right: 2px;
+}
+
+#search-term:focus {
+    outline: none;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#search{
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-left: 10px;
+}
+
+#search:hover{
+    padding: 5px;
+    background-color: crimson;
+    border-radius: 1rem;
+}
+
+input{
+    width: 100px;
+    height: 19px;
+    background-color: black;
+    border: none;
+    border: 1px solid white;
+    color: white;
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+
+.container-center{
+    width: 100%;
+    height: 350px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    
+}
+.recipe-container{
+    flex-shrink: 0;
+    width: 220px;
+    height: 100%;
+    background-color: cadetblue;
+    border-radius: 0.5rem;
+    
+    position: relative;
+    overflow: hidden;
+}
+.recipe-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.recipe-container-bottom{
+    width: 100%;
+    height: 40%;
+    background-image: linear-gradient(transparent,black);
+    backdrop-filter: blur(7px);
+    position: absolute;
+    color: white;
+    bottom: -40%;
+    transition: all ease 1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+
+}
+.recipe-container-bottom h4{
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight:bolder;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.recipe-container:hover .recipe-container-bottom{
+  
+   
+    bottom: 0;
+    cursor: pointer;
+
+}
+.favourite-recipe-cancel-button{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.favourite-recipe-cancel-button:hover {
+    background-color: crimson;
+    color: black;
+    cursor: pointer;
+}
+
+
+.container-bottom{
+    width: 100%;
+    height: 200px;
+    /* background-color: white; */
+    padding: 18px;
+    position: relative;
+    overflow:auto
+}
+.random-recipe{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    /* overflow: hidden; */
+    margin-bottom: 45px;
+    position: relative;
+    
+    
+
+
+}
+
+.random-recipe-content{
+    width: 50%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    padding: 15px 10px;
+    
+}
+.random-recipe-content h4{
+    margin-bottom: 15px;
+    font-weight: 800;
+}   
+.random-recipe-content p{
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines you want to show */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-size: 12px;
+}   
+
+.random-recipe-image{
+    width: 50%;
+    height: 100%;
+   
+    /* background-color: aquamarine; */
+
+   
+}
+
+.random-recipe-image img{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 1rem;
+    
+    
+}
+.favourite-button{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    bottom: -10px;
+    left: 180px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.favourite-button i{
+    font-size: 30px;
+    color: white;
+}
+
+
+.favourite-button i:hover{
+    color: crimson;
+    cursor: pointer;
+    
+}
+
+.container-end {
+
+    margin-top: 10px;
+    
+    width: 100%;
+    /* background-color: cadetblue; */
+
+    
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* justify-content:s; */
+}
+
+.container-end button {
+    position: static;
+    background-color: cadetblue;
+    padding: 7px;
+    border-radius: 1rem;
+    border: none;
+    color: white;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.container-end button:hover{
+    background-color: crimson;
+    color: black;
+    
+
+    font-weight: 800;
+    cursor: pointer;
+}
+
+
+.right{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.instruction-container{
+    
+    width: 450px;
+    height: 500px;
+    background-color: white;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+    display: none;
+
+
+    
+
+}
+.loadAnimation{
+    display: none;
+}
+.active{
+    display: flex;
+}
+.deactivate{
+    display: none;
+}
+.instruction-container h1{
+    width: 100%;
+    color: black;
+    padding: 10px;
+    background-color: cadetblue;
+    border-radius: 1rem;
+    margin-bottom: 25px;
+    border-bottom: 5px solid black;
+
+    
+}
+
+.video-container{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+}
+.video-frame{
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem;
+    border: 5px solid black;
+}
+
+.instruction-container h2{
+    /* margin-top: 25px; */
+    color: black;
+    text-align: justify;
+    margin-bottom: 20px;
+    /* text-decoration: underline; */
+    
+}
+.instruction-container p{
+    /* margin-top: 25px; */
+    color: black;
+    text-align: justify;
+
+    
+}

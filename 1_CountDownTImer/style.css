@@ -1,0 +1,42 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Roboto Mono Light;
+}
+html,body{
+   width: 100%;
+   height: 100%;
+}
+main{
+   width: 100%;
+   height: 100%;
+   background-image: url("snow.jpg");
+   background-position: center center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+}
+.countdown-container{
+   
+    
+   /* margin-top: 5rem; */
+   width: fit-content;
+   height: fit-content;
+  
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    background-color: transparent;
+    
+    border-radius: 25px;
+   }
+   
+.box{
+   text-align: center;
+}
+.box h1{
+   font-weight: 900;
+   /* color: red; */
+}
